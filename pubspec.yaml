@@ -13,6 +13,7 @@ dependencies:
   hive_flutter: ^1.1.0
   connectivity_plus: ^5.0.2
   intl: ^0.18.1
+  http: ^1.1.0
 
 dev_dependencies:
   hive_generator: ^2.0.1
@@ -20,3 +21,5 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+    - assets/data/

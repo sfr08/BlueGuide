@@ -1,0 +1,200 @@
+[
+    {
+        "id": "intro_hello",
+        "title": "Hello / Hi",
+        "description": "Hello! I am BlueGuide, your offline coastal assistant. I can help you with fishing zones, safety tips, weather signs, and more.",
+        "category": "General",
+        "verificationStatus": "system",
+        "confidenceScore": 100,
+        "accessCount": 0,
+        "contributorId": "system",
+        "createdAt": "2024-01-01T00:00:00.000"
+    },
+    {
+        "id": "intro_who_are_you",
+        "title": "Who are you?",
+        "description": "I am BlueGuide, an AI assistant designed to help coastal communities with knowledge about the sea, safety, and government schemes, even without internet.",
+        "category": "General",
+        "verificationStatus": "system",
+        "confidenceScore": 100,
+        "accessCount": 0,
+        "contributorId": "system",
+        "createdAt": "2024-01-01T00:00:00.000"
+    },
+    {
+        "id": "small_thank_you",
+        "title": "Thank You",
+        "description": "You're very welcome! Let me know if you need any other help with fishing or sea safety.",
+        "category": "General",
+        "verificationStatus": "system",
+        "confidenceScore": 100,
+        "accessCount": 0,
+        "contributorId": "system",
+        "createdAt": "2024-01-01T00:00:00.000"
+    },
+    {
+        "id": "small_bye",
+        "title": "Goodbye / Bye",
+        "description": "Safe travels! May the winds be fair and the seas calm. See you next time!",
+        "category": "General",
+        "verificationStatus": "system",
+        "confidenceScore": 100,
+        "accessCount": 0,
+        "contributorId": "system",
+        "createdAt": "2024-01-01T00:00:00.000"
+    },
+    {
+        "id": "how_are_you",
+        "title": "How are you?",
+        "description": "I'm just a computer program, but I'm ready to help you navigate the waters! How can I assist you today?",
+        "category": "General",
+        "verificationStatus": "system",
+        "confidenceScore": 100,
+        "accessCount": 0,
+        "contributorId": "system",
+        "createdAt": "2024-01-01T00:00:00.000"
+    },
+    {
+        "id": "fishing_best_time",
+        "title": "Best Time to Fish",
+        "description": "The best time to fish is usually early morning at sunrise or late evening at sunset. Fish are most active during these times. Fishing is also good just before a storm when pressure drops.",
+        "category": "Fishing",
+        "verificationStatus": "community_verified",
+        "confidenceScore": 95,
+        "accessCount": 0,
+        "contributorId": "system",
+        "createdAt": "2024-01-01T00:00:00.000"
+    },
+    {
+        "id": "fishing_tide_high",
+        "title": "Fishing at High Tide",
+        "description": "Incoming tides (rising tides) are excellent for fishing as they bring in oxygen and food. High tide is generally better than low tide for near-shore fishing.",
+        "category": "Fishing",
+        "verificationStatus": "scientifically_verified",
+        "confidenceScore": 90,
+        "accessCount": 0,
+        "contributorId": "system",
+        "createdAt": "2024-01-01T00:00:00.000"
+    },
+    {
+        "id": "safety_rip_current",
+        "title": "Rip Current Safety",
+        "description": "If caught in a rip current, DO NOT fight it. Swim parallel to the shore until you are out of the pull, then swim back to land. Float or tread water if you get tired.",
+        "category": "Safety",
+        "verificationStatus": "scientifically_verified",
+        "confidenceScore": 100,
+        "accessCount": 0,
+        "contributorId": "system",
+        "createdAt": "2024-01-01T00:00:00.000"
+    },
+    {
+        "id": "safety_life_jacket",
+        "title": "Life Jackets (PFD)",
+        "description": "Always wear a life jacket (PFD) when on a boat. Ensure it fits snugly and is not torn. In rough seas, it is your best chance of survival.",
+        "category": "Safety",
+        "verificationStatus": "scientifically_verified",
+        "confidenceScore": 100,
+        "accessCount": 0,
+        "contributorId": "system",
+        "createdAt": "2024-01-01T00:00:00.000"
+    },
+    {
+        "id": "weather_red_sky",
+        "title": "Red Sky Weather",
+        "description": "'Red sky at night, sailor's delight' means good weather is coming. 'Red sky in morning, sailors take warning' means a storm might be approaching.",
+        "category": "Weather",
+        "verificationStatus": "community_verified",
+        "confidenceScore": 85,
+        "accessCount": 0,
+        "contributorId": "system",
+        "createdAt": "2024-01-01T00:00:00.000"
+    },
+    {
+        "id": "weather_pressure",
+        "title": "Barometric Pressure",
+        "description": "A rapid drop in barometric pressure indicates a storm is approaching. If your barometer falls quickly, head to shore immediately.",
+        "category": "Weather",
+        "verificationStatus": "scientifically_verified",
+        "confidenceScore": 95,
+        "accessCount": 0,
+        "contributorId": "system",
+        "createdAt": "2024-01-01T00:00:00.000"
+    },
+    {
+        "id": "gear_cleaning",
+        "title": "Cleaning Fishing Reel",
+        "description": "After using your reel in saltwater, tighten the drag and rinse it gently with fresh water. Do not blast it with high pressure. Oil the moving parts regularly.",
+        "category": "Gear",
+        "verificationStatus": "expert_verified",
+        "confidenceScore": 90,
+        "accessCount": 0,
+        "contributorId": "system",
+        "createdAt": "2024-01-01T00:00:00.000"
+    },
+    {
+        "id": "first_aid_jellyfish",
+        "title": "Jellyfish Sting Treatment",
+        "description": "Rinse the sting with vinegar or seawater. Do NOT use fresh water. Remove tentacles with tweezers (not hands). Immerse in hot water (45°C) for 20-45 minutes.",
+        "category": "Safety",
+        "verificationStatus": "medical_verified",
+        "confidenceScore": 98,
+        "accessCount": 0,
+        "contributorId": "system",
+        "createdAt": "2024-01-01T00:00:00.000"
+    },
+    {
+        "id": "nav_north_star",
+        "title": "Finding True North",
+        "description": "At night in the Northern Hemisphere, find the Big Dipper. The two outer stars of its 'cup' point directly to Polaris, the North Star.",
+        "category": "Navigation",
+        "verificationStatus": "expert_verified",
+        "confidenceScore": 100,
+        "accessCount": 0,
+        "contributorId": "system",
+        "createdAt": "2024-01-01T00:00:00.000"
+    },
+    {
+        "id": "fish_mackerel",
+        "title": "Indian Mackerel (Ayala)",
+        "description": "Mackerel are surface feeders found in shoals. Best caught using gillnets or purse seines. They are abundant during the post-monsoon season.",
+        "category": "Fishing",
+        "verificationStatus": "community_verified",
+        "confidenceScore": 90,
+        "accessCount": 0,
+        "contributorId": "system",
+        "createdAt": "2024-01-01T00:00:00.000"
+    },
+    {
+        "id": "fish_sardine",
+        "title": "Oil Sardine (Mathi)",
+        "description": "Sardines are a staple fish in Kerala. They school in large numbers near the coast. Look for seabirds diving into the water, which often indicates a sardine shoal.",
+        "category": "Fishing",
+        "verificationStatus": "community_verified",
+        "confidenceScore": 90,
+        "accessCount": 0,
+        "contributorId": "system",
+        "createdAt": "2024-01-01T00:00:00.000"
+    },
+    {
+        "id": "scheme_matsya",
+        "title": "Matsya Samridhi Scheme",
+        "description": "This government scheme provides subsidies for fish farming and aquaculture. Contact your local fisheries office for application forms.",
+        "category": "Government",
+        "verificationStatus": "official",
+        "confidenceScore": 100,
+        "accessCount": 0,
+        "contributorId": "system",
+        "createdAt": "2024-01-01T00:00:00.000"
+    },
+    {
+        "id": "scheme_kissan_card",
+        "title": "Kisan Credit Card (KCC)",
+        "description": "Fishermen are eligible for Kisan Credit Cards to get low-interest loans for working capital (fuel, ice, repairs). Apply at any nationalized bank.",
+        "category": "Government",
+        "verificationStatus": "official",
+        "confidenceScore": 100,
+        "accessCount": 0,
+        "contributorId": "system",
+        "createdAt": "2024-01-01T00:00:00.000"
+    }
+]

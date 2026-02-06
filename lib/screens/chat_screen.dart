@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../models/chat_message.dart';
 import '../widgets/chat_bubble.dart';
-
+import '../services/decision_engine.dart';
 import '../providers/auth_provider.dart';
 import 'login_screen.dart';
 import 'history_screen.dart';
@@ -10,6 +10,7 @@ import 'settings_screen.dart';
 import 'static_content_screen.dart';
 import 'rewards_screen.dart';
 import 'contribute_screen.dart';
+import 'profile_screen.dart';
 
 class ChatScreen extends StatefulWidget {
   const ChatScreen({super.key});
@@ -41,9 +42,28 @@ class _ChatScreenState extends State<ChatScreen> {
     });
   }
 
-  void _sendMessage() {
-    _handleSubmitted(_controller.text);
+  Future<void> _sendMessage() async {
+    final text = _controller.text.trim();
+    if (text.isEmpty) return;
+
+    setState(() {
+      _messages.add(ChatMessage(
+        text: text,
+        sender: MessageSender.user,
+      ));
+    });
+
     _controller.clear();
+
+    // The Decision Engine handles all logic (Safety -> Offline -> Online -> Fallback)
+    final knowledge = await DecisionEngine.processQuery(context, text);
+
+    setState(() {
+      _messages.add(ChatMessage(
+        text: knowledge.description,
+        sender: MessageSender.ai,
+      ));
+    });
   }
 
   void _startNewChat() {
@@ -96,15 +116,22 @@ class _ChatScreenState extends State<ChatScreen> {
                     itemBuilder: (BuildContext context) =>
                         <PopupMenuEntry<String>>[
                       PopupMenuItem<String>(
-                        enabled: false,
+                        // Value null so it doesn't close menu immediately if we want custom logic,
+                        // but actually we want to tap it.
+                        // Better to make it enabled and handle navigation.
+                        value: 'profile',
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text(auth.name,
+                            Text(auth.name.isEmpty ? "User" : auth.name,
                                 style: const TextStyle(
                                     fontWeight: FontWeight.bold)),
-                            Text(auth.email,
+                            Text(auth.email.isEmpty ? "No Email" : auth.email,
                                 style: const TextStyle(fontSize: 12)),
+                            const SizedBox(height: 4),
+                            const Text("Edit Profile",
+                                style: TextStyle(
+                                    color: Colors.blue, fontSize: 10)),
                           ],
                         ),
                       ),
@@ -123,6 +150,11 @@ class _ChatScreenState extends State<ChatScreen> {
                     onSelected: (String value) {
                       if (value == 'logout') {
                         auth.logout();
+                      } else if (value == 'profile') {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (_) => const ProfileScreen()));
                       }
                     },
                   ),

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import '../models/coastal_knowledge.dart';
+import '../services/hive_service.dart';
 
 class ContributeScreen extends StatefulWidget {
   const ContributeScreen({super.key});
@@ -13,24 +15,34 @@ class _ContributeScreenState extends State<ContributeScreen> {
   final _infoController = TextEditingController();
   final _sourceController = TextEditingController();
 
-  void _submitContribution() {
+  void _submitContribution() async {
     if (_formKey.currentState!.validate()) {
-      // Mock Submission
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
-          content: const Text(
-              "Thank you! Your contribution has been submitted for review."),
-          backgroundColor: Colors.green.shade700,
-        ),
+      // Create new knowledge entry
+      final newKnowledge = CoastalKnowledge(
+        id: 'contrib_${DateTime.now().millisecondsSinceEpoch}',
+        title: _topicController.text.trim(),
+        description: _infoController.text.trim(),
+        category: 'Community Contribution',
+        verificationStatus: 'community_verified',
+        confidenceScore: 100, // Trusted for demo
+        accessCount: 0,
+        contributorId: HiveService.getUserProfile()?.name ?? 'Anonymous',
+        createdAt: DateTime.now(),
       );
 
-      // Clear form
-      _topicController.clear();
-      _infoController.clear();
-      _sourceController.clear();
+      print("DEBUG: Saving Contribution: ${newKnowledge.title}");
 
-      // Optional: Navigate back
-      // Navigator.pop(context);
+      // Save to Hive (Instant Learning!)
+      await HiveService.cacheKnowledge(newKnowledge);
+
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content:
+              Text("Contribution Added! The AI has learned this instantly."),
+          backgroundColor: Colors.green,
+        ),
+      );
+      Navigator.pop(context);
     }
   }
 
