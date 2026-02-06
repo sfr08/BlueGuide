@@ -17,6 +17,14 @@ class HistoryScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Chat History"),
         centerTitle: true,
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.home),
+            onPressed: () {
+              Navigator.of(context).popUntil((route) => route.isFirst);
+            },
+          ),
+        ],
       ),
       body: ListView.separated(
         padding: const EdgeInsets.all(16),
