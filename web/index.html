@@ -31,6 +31,26 @@
 
   <title>blue_guide</title>
   <link rel="manifest" href="manifest.json">
+  
+  <!-- Firebase JavaScript SDK -->
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+  
+  <script>
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyBqEygjHaQlhqjssMrBuvlAPwSGjBEXqAo",
+      authDomain: "blueguide-9d75d.firebaseapp.com",
+      projectId: "blueguide-9d75d",
+      storageBucket: "blueguide-9d75d.firebasestorage.app",
+      messagingSenderId: "165432120588",
+      appId: "1:165432120588:web:caaff80b063a777f8ba529",
+      measurementId: "G-VSDQDJVCBE"
+    };
+    
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
 </head>
 <body>
   <script src="flutter_bootstrap.js" async></script>

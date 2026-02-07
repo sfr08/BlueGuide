@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../models/coastal_knowledge.dart';
 import '../services/hive_service.dart';
+import '../services/firebase_contribution_service.dart';
 
 class ContributeScreen extends StatefulWidget {
   const ContributeScreen({super.key});
@@ -17,32 +18,43 @@ class _ContributeScreenState extends State<ContributeScreen> {
 
   void _submitContribution() async {
     if (_formKey.currentState!.validate()) {
-      // Create new knowledge entry
-      final newKnowledge = CoastalKnowledge(
-        id: 'contrib_${DateTime.now().millisecondsSinceEpoch}',
-        title: _topicController.text.trim(),
-        description: _infoController.text.trim(),
-        category: 'Community Contribution',
-        verificationStatus: 'community_verified',
-        confidenceScore: 100, // Trusted for demo
-        accessCount: 0,
-        contributorId: HiveService.getUserProfile()?.name ?? 'Anonymous',
-        createdAt: DateTime.now(),
-      );
-
-      print("DEBUG: Saving Contribution: ${newKnowledge.title}");
-
-      // Save to Hive (Instant Learning!)
-      await HiveService.cacheKnowledge(newKnowledge);
-
+      // Show loading indicator
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(
-          content:
-              Text("Contribution Added! The AI has learned this instantly."),
-          backgroundColor: Colors.green,
+          content: Text("📤 Submitting to cloud..."),
+          backgroundColor: Colors.blue,
+          duration: Duration(seconds: 1),
         ),
       );
-      Navigator.pop(context);
+
+      // Submit to Firebase
+      final success = await FirebaseContributionService.submitContribution(
+        title: _topicController.text.trim(),
+        content: _infoController.text.trim(),
+        source: _sourceController.text.trim(),
+        category: 'Community Contribution',
+      );
+
+      if (success) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(
+            content: Text(
+                "✅ Contribution submitted! Waiting for admin approval.\n\nYou'll earn BlueCoins once approved."),
+            backgroundColor: Colors.orange,
+            duration: Duration(seconds: 4),
+          ),
+        );
+        Navigator.pop(context);
+      } else {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(
+            content: Text(
+                "❌ Failed to submit. Please check your internet connection."),
+            backgroundColor: Colors.red,
+            duration: Duration(seconds: 3),
+          ),
+        );
+      }
     }
   }
 

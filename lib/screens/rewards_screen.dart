@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import '../services/hive_service.dart';
+import '../services/firebase_contribution_service.dart';
 
 class RewardsScreen extends StatefulWidget {
   const RewardsScreen({super.key});
@@ -8,7 +10,8 @@ class RewardsScreen extends StatefulWidget {
 }
 
 class _RewardsScreenState extends State<RewardsScreen> {
-  int _blueCoins = 450;
+  int _blueCoins = 0;
+  bool _isLoading = true;
   final List<Map<String, dynamic>> _coupons = [
     {
       "title": "Seaside Mart",
@@ -40,23 +43,109 @@ class _RewardsScreenState extends State<RewardsScreen> {
     },
   ];
 
-  final List<Map<String, dynamic>> _history = [
-    {"title": "Weather Contribution", "amount": "+50", "date": "Today"},
-    {"title": "Fishing Zone Report", "amount": "+100", "date": "Yesterday"},
-    {"title": "New User Bonus", "amount": "+300", "date": "Feb 5"},
-  ];
+  List<Map<String, dynamic>> _history = [];
 
-  void _redeemCoupon(Map<String, dynamic> coupon) {
-    if (_blueCoins >= coupon['cost']) {
+  @override
+  void initState() {
+    super.initState();
+    _loadBlueCoins();
+  }
+
+  Future<void> _loadBlueCoins() async {
+    setState(() => _isLoading = true);
+
+    try {
+      // Get user contributions and calculate total BlueCoins earned
+      final contributions =
+          await FirebaseContributionService.getUserContributions();
+
+      int totalEarned = 0;
+      List<Map<String, dynamic>> history = [];
+
+      for (var contribution in contributions) {
+        if (contribution['status']?.toLowerCase() == 'approved') {
+          final points = contribution['pointsAwarded'] ?? 100;
+          totalEarned += points as int;
+
+          // Add to history
+          final approvedDate = contribution['approvedAt'];
+          String dateStr = 'Recently';
+          if (approvedDate != null) {
+            try {
+              final date = approvedDate.toDate();
+              final now = DateTime.now();
+              final diff = now.difference(date);
+              if (diff.inDays == 0) {
+                dateStr = 'Today';
+              } else if (diff.inDays == 1) {
+                dateStr = 'Yesterday';
+              } else if (diff.inDays < 7) {
+                dateStr = '${diff.inDays} days ago';
+              } else {
+                dateStr = '${date.day}/${date.month}';
+              }
+            } catch (e) {
+              dateStr = 'Recently';
+            }
+          }
+
+          history.add({
+            "title": contribution['title'] ?? 'Contribution',
+            "amount": "+${points}",
+            "date": dateStr,
+          });
+        }
+      }
+
+      // Load user profile and update with earned coins
+      final user = HiveService.getUserProfile();
+      int currentBalance = user?.blueCoins ?? 0;
+
+      // If user has 0 coins but earned some, update their balance
+      if (currentBalance == 0 && totalEarned > 0) {
+        currentBalance = totalEarned;
+        if (user != null) {
+          user.blueCoins = currentBalance;
+          await HiveService.saveUserProfile(user);
+          print('💾 Saved initial balance to profile: $currentBalance');
+        }
+      }
+
       setState(() {
-        _blueCoins -= (coupon['cost'] as int);
+        _blueCoins = currentBalance;
+        _history = history;
+        _isLoading = false;
+      });
+
+      print('💰 BlueCoins loaded: $_blueCoins (earned: $totalEarned)');
+    } catch (e) {
+      print('❌ Error loading BlueCoins: $e');
+      setState(() => _isLoading = false);
+    }
+  }
+
+  void _redeemCoupon(Map<String, dynamic> coupon) async {
+    if (_blueCoins >= coupon['cost']) {
+      final newBalance = _blueCoins - (coupon['cost'] as int);
+
+      // Update user profile with new balance
+      final user = HiveService.getUserProfile();
+      if (user != null) {
+        user.blueCoins = newBalance;
+        await HiveService.saveUserProfile(user);
+      }
+
+      setState(() {
+        _blueCoins = newBalance;
         _history.insert(0, {
           "title": "Redeemed: ${coupon['title']}",
           "amount": "-${coupon['cost']}",
           "date": "Just now"
         });
       });
+
       _showSuccessDialog(coupon);
+      print('💸 Redeemed coupon. New balance: $_blueCoins');
     } else {
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(
@@ -119,6 +208,20 @@ class _RewardsScreenState extends State<RewardsScreen> {
 
   @override
   Widget build(BuildContext context) {
+    if (_isLoading) {
+      return Scaffold(
+        appBar: AppBar(
+          title: const Text("My Earnings"),
+          centerTitle: true,
+          backgroundColor: Colors.transparent,
+          elevation: 0,
+        ),
+        body: const Center(
+          child: CircularProgressIndicator(),
+        ),
+      );
+    }
+
     return Scaffold(
       appBar: AppBar(
         title: const Text("My Earnings"),
@@ -126,6 +229,11 @@ class _RewardsScreenState extends State<RewardsScreen> {
         backgroundColor: Colors.transparent,
         elevation: 0,
         actions: [
+          IconButton(
+            icon: const Icon(Icons.refresh),
+            onPressed: _loadBlueCoins,
+            tooltip: 'Refresh Balance',
+          ),
           IconButton(
             icon: const Icon(Icons.home),
             onPressed: () {
