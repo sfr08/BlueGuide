@@ -5,26 +5,16 @@ class OnlineAIService {
   static const String _endpoint = "https://api.openai.com/v1/chat/completions";
 
   static Future<String> getResponse(String message) async {
-    final response = await http.post(
-      Uri.parse(_endpoint),
-      headers: {
-        "Content-Type": "application/json",
-        "Authorization": "Bearer YOUR_API_KEY",
-      },
-      body: jsonEncode({
-        "model": "gpt-3.5-turbo",
-        "messages": [
-          {
-            "role": "system",
-            "content":
-                "You are BlueGuide, a coastal knowledge assistant for Indian coastal communities."
-          },
-          {"role": "user", "content": message}
-        ]
-      }),
-    );
+    // MOCK RESPONSE FOR DEMO
+    // (Since we don't have a real API key in this environment, we simulate a smart AI response)
+    await Future.delayed(
+        const Duration(seconds: 1)); // Simulate network latency
 
-    final data = jsonDecode(response.body);
-    return data["choices"][0]["message"]["content"];
+    return "I am the Online AI Brain 🧠\n\nI can search the web and answer complex questions.\n(Currently running in Mock Mode for demonstration).";
+
+    /* 
+    // REAL IMPLEMENTATION (Uncomment when you have a key)
+    final response = await http.post(...)
+    */
   }
 }

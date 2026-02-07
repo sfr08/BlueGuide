@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import '../providers/theme_provider.dart';
 
 class SettingsScreen extends StatefulWidget {
   const SettingsScreen({super.key});
@@ -8,7 +10,6 @@ class SettingsScreen extends StatefulWidget {
 }
 
 class _SettingsScreenState extends State<SettingsScreen> {
-  bool _darkMode = true;
   bool _notifications = true;
 
   @override
@@ -28,11 +29,22 @@ class _SettingsScreenState extends State<SettingsScreen> {
       ),
       body: ListView(
         children: [
-          SwitchListTile(
-            title: const Text("Dark Mode"),
-            value: _darkMode,
-            onChanged: (val) => setState(() => _darkMode = val),
-            secondary: const Icon(Icons.dark_mode, color: Colors.blueGrey),
+          Consumer<ThemeProvider>(
+            builder: (context, themeProvider, _) {
+              return SwitchListTile(
+                title: const Text("Dark Mode"),
+                subtitle: Text(
+                  themeProvider.isDarkMode ? "Enabled" : "Disabled",
+                  style: Theme.of(context).textTheme.bodyMedium,
+                ),
+                value: themeProvider.isDarkMode,
+                onChanged: (val) => themeProvider.setDarkMode(val),
+                secondary: Icon(
+                  themeProvider.isDarkMode ? Icons.dark_mode : Icons.light_mode,
+                  color: Colors.blueGrey,
+                ),
+              );
+            },
           ),
           SwitchListTile(
             title: const Text("Notifications"),

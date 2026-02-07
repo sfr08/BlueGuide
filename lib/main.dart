@@ -3,10 +3,9 @@ import 'package:provider/provider.dart';
 
 import 'providers/auth_provider.dart';
 import 'providers/connectivity_provider.dart';
-import 'screens/login_screen.dart';
+import 'providers/theme_provider.dart';
 import 'screens/chat_screen.dart';
 import 'services/hive_service.dart';
-import 'theme/app_theme.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -24,12 +23,17 @@ class BlueGuideApp extends StatelessWidget {
       providers: [
         ChangeNotifierProvider(create: (_) => AuthProvider()),
         ChangeNotifierProvider(create: (_) => ConnectivityProvider()),
+        ChangeNotifierProvider(create: (_) => ThemeProvider()),
       ],
-      child: MaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: 'BlueGuide',
-        home: const ChatScreen(),
-        theme: AppTheme.darkTheme,
+      child: Consumer<ThemeProvider>(
+        builder: (context, themeProvider, _) {
+          return MaterialApp(
+            debugShowCheckedModeBanner: false,
+            title: 'BlueGuide',
+            home: const ChatScreen(),
+            theme: themeProvider.currentTheme,
+          );
+        },
       ),
     );
   }

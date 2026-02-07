@@ -1,0 +1,1109 @@
+{
+    "chatbot_data": [
+        {
+            "category": "District Production",
+            "keywords": [
+                "thiruvananthapuram production"
+            ],
+            "question": "How much fish was produced in Thiruvananthapuram?",
+            "answer": "Thiruvananthapuram produced 60217 tonnes of fish in 2021-22."
+        },
+        {
+            "category": "District Production",
+            "keywords": [
+                "kollam production"
+            ],
+            "question": "How much fish was produced in Kollam?",
+            "answer": "Kollam produced 122166 tonnes of fish in 2021-22."
+        },
+        {
+            "category": "District Production",
+            "keywords": [
+                "pathanamthitta production"
+            ],
+            "question": "How much fish was produced in Pathanamthitta?",
+            "answer": "Pathanamthitta produced 3916 tonnes of fish in 2021-22."
+        },
+        {
+            "category": "District Production",
+            "keywords": [
+                "alappuzha production"
+            ],
+            "question": "How much fish was produced in Alappuzha?",
+            "answer": "Alappuzha produced 76670 tonnes of fish in 2021-22."
+        },
+        {
+            "category": "District Production",
+            "keywords": [
+                "kottayam production"
+            ],
+            "question": "How much fish was produced in Kottayam?",
+            "answer": "Kottayam produced 56096 tonnes of fish in 2021-22."
+        },
+        {
+            "category": "District Production",
+            "keywords": [
+                "idukki production"
+            ],
+            "question": "How much fish was produced in Idukki?",
+            "answer": "Idukki produced 1513 tonnes of fish in 2021-22."
+        },
+        {
+            "category": "District Production",
+            "keywords": [
+                "ernakulam production"
+            ],
+            "question": "How much fish was produced in Ernakulam?",
+            "answer": "Ernakulam produced 244702 tonnes of fish in 2021-22."
+        },
+        {
+            "category": "District Production",
+            "keywords": [
+                "thrissur production"
+            ],
+            "question": "How much fish was produced in Thrissur?",
+            "answer": "Thrissur produced 45429 tonnes of fish in 2021-22."
+        },
+        {
+            "category": "District Production",
+            "keywords": [
+                "palakkad production"
+            ],
+            "question": "How much fish was produced in Palakkad?",
+            "answer": "Palakkad produced 4799 tonnes of fish in 2021-22."
+        },
+        {
+            "category": "District Production",
+            "keywords": [
+                "malappuram production"
+            ],
+            "question": "How much fish was produced in Malappuram?",
+            "answer": "Malappuram produced 36655 tonnes of fish in 2021-22."
+        },
+        {
+            "category": "District Production",
+            "keywords": [
+                "kozhikode production"
+            ],
+            "question": "How much fish was produced in Kozhikode?",
+            "answer": "Kozhikode produced 94338 tonnes of fish in 2021-22."
+        },
+        {
+            "category": "District Production",
+            "keywords": [
+                "wayanad production"
+            ],
+            "question": "How much fish was produced in Wayanad?",
+            "answer": "Wayanad produced 1207 tonnes of fish in 2021-22."
+        },
+        {
+            "category": "District Production",
+            "keywords": [
+                "kannur production"
+            ],
+            "question": "How much fish was produced in Kannur?",
+            "answer": "Kannur produced 20093 tonnes of fish in 2021-22."
+        },
+        {
+            "category": "District Production",
+            "keywords": [
+                "kasaragod production"
+            ],
+            "question": "How much fish was produced in Kasaragod?",
+            "answer": "Kasaragod produced 59572 tonnes of fish in 2021-22."
+        },
+        {
+            "category": "Fish Categories",
+            "keywords": [
+                "oil sardine production"
+            ],
+            "question": "How much Oil Sardine was caught in 2021-22?",
+            "answer": "12355 tonnes of Oil Sardine were caught in 2021-22."
+        },
+        {
+            "category": "Fish Categories",
+            "keywords": [
+                "lesser sardine production"
+            ],
+            "question": "How much Lesser Sardine was caught in 2021-22?",
+            "answer": "62058 tonnes of Lesser Sardine were caught in 2021-22."
+        },
+        {
+            "category": "Fish Categories",
+            "keywords": [
+                "anchovy production"
+            ],
+            "question": "How much Anchovy was caught in 2021-22?",
+            "answer": "38679 tonnes of Anchovy were caught in 2021-22."
+        },
+        {
+            "category": "Fish Categories",
+            "keywords": [
+                "mackerel production"
+            ],
+            "question": "How much Mackerel was caught in 2021-22?",
+            "answer": "63614 tonnes of Mackerel were caught in 2021-22."
+        },
+        {
+            "category": "Fish Categories",
+            "keywords": [
+                "tuna production"
+            ],
+            "question": "How much Tuna was caught in 2021-22?",
+            "answer": "23066 tonnes of Tuna were caught in 2021-22."
+        },
+        {
+            "category": "Fish Categories",
+            "keywords": [
+                "crab production"
+            ],
+            "question": "How much Crab was caught in 2021-22?",
+            "answer": "6142 tonnes of Crabs were caught in 2021-22."
+        },
+        {
+            "category": "Exports",
+            "keywords": [
+                "export 2016"
+            ],
+            "question": "How much marine product was exported in 2016-17?",
+            "answer": "159142 tonnes were exported with a value of 5008.54 crore rupees."
+        },
+        {
+            "category": "Exports",
+            "keywords": [
+                "export 2017"
+            ],
+            "question": "How much marine product was exported in 2017-18?",
+            "answer": "178646 tonnes were exported with a value of 5919.02 crore rupees."
+        },
+        {
+            "category": "Exports",
+            "keywords": [
+                "export 2018"
+            ],
+            "question": "How much marine product was exported in 2018-19?",
+            "answer": "183063 tonnes were exported with a value of 6014.70 crore rupees."
+        },
+        {
+            "category": "Exports",
+            "keywords": [
+                "export 2019"
+            ],
+            "question": "How much marine product was exported in 2019-20?",
+            "answer": "148227 tonnes were exported with a value of 5020.34 crore rupees."
+        },
+        {
+            "category": "Exports",
+            "keywords": [
+                "export 2020"
+            ],
+            "question": "How much marine product was exported in 2020-21?",
+            "answer": "144700 tonnes were exported with a value of 5039.89 crore rupees."
+        },
+        {
+            "category": "Water Bodies",
+            "keywords": [
+                "vembanad lake area"
+            ],
+            "question": "What is the area of Vembanad Lake?",
+            "answer": "Vembanad Lake covers 10661.23 hectares."
+        },
+        {
+            "category": "Water Bodies",
+            "keywords": [
+                "ashtamudi lake area"
+            ],
+            "question": "What is the area of Ashtamudi Lake?",
+            "answer": "Ashtamudi Lake covers 6424.15 hectares."
+        },
+        {
+            "category": "Water Bodies",
+            "keywords": [
+                "periyar river length"
+            ],
+            "question": "What is the length of Periyar River?",
+            "answer": "Periyar River is 244 kilometers long."
+        },
+        {
+            "category": "Water Bodies",
+            "keywords": [
+                "bharathapuzha river length"
+            ],
+            "question": "What is the length of Bharathapuzha River?",
+            "answer": "Bharathapuzha River is 209 kilometers long."
+        },
+        {
+            "category": "Fishing Method",
+            "keywords": [
+                "monsoon",
+                "trap",
+                "barrier",
+                "bamboo"
+            ],
+            "question": "How do fishermen catch fish during the monsoon season?",
+            "answer": "During the monsoon, fishermen place bamboo barriers in water channels with a small opening where traps are kept. The barrier guides the fish toward the trap."
+        },
+        {
+            "category": "Fish Breeding",
+            "keywords": [
+                "catfish",
+                "breeding",
+                "pots",
+                "paddy field"
+            ],
+            "question": "How do fishermen encourage catfish breeding?",
+            "answer": "Earthen pots or circular rings are placed in waterlogged paddy fields. These pots act like natural pits where catfish prefer to lay their eggs."
+        },
+        {
+            "category": "Fishing Method",
+            "keywords": [
+                "small fish",
+                "pots",
+                "bait",
+                "air breathing fish"
+            ],
+            "question": "How are small indigenous fishes caught using pots?",
+            "answer": "Fishermen place pots with leftover food in shallow water. Air-breathing fishes hide inside the pots, making them easy to catch."
+        },
+        {
+            "category": "Health Belief",
+            "keywords": [
+                "energy",
+                "illness",
+                "channa",
+                "recovery"
+            ],
+            "question": "Why is Channa fish eaten during illness recovery?",
+            "answer": "Channa fish is believed to boost energy during recovery because it is rich in protein and easy to digest."
+        },
+        {
+            "category": "Health Belief",
+            "keywords": [
+                "milk production",
+                "chela fish",
+                "lactating mother"
+            ],
+            "question": "Which fish is traditionally given to improve milk production?",
+            "answer": "Salmophasia bacaila, also known as Chela fish, is traditionally given to lactating mothers as it is believed to improve milk production."
+        },
+        {
+            "category": "Traditional Medicine",
+            "keywords": [
+                "burn",
+                "fish oil",
+                "mystus",
+                "healing"
+            ],
+            "question": "How is fish oil used for burn treatment?",
+            "answer": "Oil extracted from dried Mystus vittatus fish is traditionally applied to burn wounds, as it is believed to have healing properties."
+        },
+        {
+            "category": "Fish Transport",
+            "keywords": [
+                "lemon",
+                "live fish",
+                "transport",
+                "survival"
+            ],
+            "question": "Why is lemon juice added during live fish transport?",
+            "answer": "A small amount of lemon juice is added to water to improve the survival of live fish during transport. It is believed to act as a natural preservative."
+        },
+        {
+            "category": "Fish Seed Transport",
+            "keywords": [
+                "prawn seed",
+                "bay leaf",
+                "mortality"
+            ],
+            "question": "How do fishermen reduce prawn seed mortality during transport?",
+            "answer": "Crushed bay leaves are added to the water to reduce prawn seed mortality. The leaves are believed to have natural antimicrobial properties."
+        },
+        {
+            "category": "Weather Prediction",
+            "keywords": [
+                "cyclone",
+                "ribbon fish",
+                "sound",
+                "storm"
+            ],
+            "question": "How do fishermen traditionally predict a cyclone?",
+            "answer": "Some fishermen believe that a whistling sound made by ribbon fish is a sign that a cyclone may be approaching."
+        },
+        {
+            "category": "Crab Fishing",
+            "keywords": [
+                "mud crab",
+                "iron rod",
+                "mangrove"
+            ],
+            "question": "How are mud crabs traditionally caught in mangrove areas?",
+            "answer": "Fishermen use thin curved iron rods and insert them into mangrove burrows. The crab grips the rod, making it easier to pull out."
+        },
+        {
+            "category": "Net Maintenance",
+            "keywords": [
+                "fishing net",
+                "gaab fruit",
+                "strengthen",
+                "tannin"
+            ],
+            "question": "How do fishermen strengthen their fishing nets naturally?",
+            "answer": "Extract from unripe Gaab fruit (Diospyros embryopteris) is applied to fishing nets. The tannins in the fruit help harden and strengthen the fibers."
+        },
+        {
+            "category": "Climate & Fishing",
+            "keywords": [
+                "wind direction",
+                "wind speed"
+            ],
+            "question": "Why is wind direction important for fishing?",
+            "answer": "Fishermen believe wind direction and speed directly affect fish availability. Strong winds and rough currents reduce fish catch."
+        },
+        {
+            "category": "Upwelling",
+            "keywords": [
+                "coastal upwelling",
+                "south west wind"
+            ],
+            "question": "When does coastal upwelling occur and why is it important?",
+            "answer": "Coastal upwelling occurs during May and June when winds blow from south and west. It brings nutrients and leads to heavy fish catch."
+        },
+        {
+            "category": "Moon Phase",
+            "keywords": [
+                "full moon",
+                "new moon",
+                "less catch"
+            ],
+            "question": "How does moon phase affect fish catch?",
+            "answer": "Fish catch is usually less a few days before full moon and new moon because strong water currents make fishing difficult."
+        },
+        {
+            "category": "Fish Behavior",
+            "keywords": [
+                "transparent water",
+                "turbid water"
+            ],
+            "question": "Does water clarity affect fish catch?",
+            "answer": "Fish catch is usually low in very clear water. Turbid or muddy water often gives heavy fish catch."
+        },
+        {
+            "category": "Species Indicator",
+            "keywords": [
+                "red rings",
+                "tuna",
+                "shrimp"
+            ],
+            "question": "What does the appearance of red rings in the sea indicate?",
+            "answer": "Red rings appearing in the sea indicate the presence of tuna and shrimps."
+        },
+        {
+            "category": "Species Indicator",
+            "keywords": [
+                "southern wind",
+                "squid availability"
+            ],
+            "question": "When is squid more available?",
+            "answer": "Squid availability increases when winds blow from the south."
+        },
+        {
+            "category": "Odour Indicator",
+            "keywords": [
+                "bad smell",
+                "dead fish",
+                "low catch"
+            ],
+            "question": "What does bad smell in sea water indicate?",
+            "answer": "Slow moving water with bad odour due to dead fish indicates poor fish catch."
+        },
+        {
+            "category": "Sea Snakes",
+            "keywords": [
+                "sea snakes",
+                "less catch"
+            ],
+            "question": "What does the presence of many sea snakes indicate?",
+            "answer": "Large numbers of sea snakes in fishing areas indicate very low fish catch."
+        },
+        {
+            "category": "Temperature",
+            "keywords": [
+                "temperature increase",
+                "spawning"
+            ],
+            "question": "How does temperature affect fish spawning?",
+            "answer": "Fishermen believe fish spawning increases when water temperature increases."
+        },
+        {
+            "category": "Mass Media",
+            "keywords": [
+                "tv",
+                "weather information"
+            ],
+            "question": "How do fishermen get weather information?",
+            "answer": "Most fishermen use TV and newspapers to get weather-related information."
+        },
+        {
+            "category": "Geography",
+            "keywords": [
+                "gulf of mannar location"
+            ],
+            "question": "Where is the Gulf of Mannar located?",
+            "answer": "The Gulf of Mannar is located off the southeast coast of Tamil Nadu between 78°5' E to 79°30' E and 8°45' N to 9°25' N."
+        },
+        {
+            "category": "Biodiversity",
+            "keywords": [
+                "species in gulf of mannar"
+            ],
+            "question": "How many species are found in the Gulf of Mannar?",
+            "answer": "The Gulf of Mannar supports about 3600 species including fishes, corals, seaweeds, molluscs and crustaceans."
+        },
+        {
+            "category": "Oceanography",
+            "keywords": [
+                "strong current",
+                "gulf current"
+            ],
+            "question": "Are currents strong in the Gulf of Mannar?",
+            "answer": "Yes, currents in the Gulf of Mannar are strong and rough seas are common between April and August."
+        },
+        {
+            "category": "Fishing Villages",
+            "keywords": [
+                "fishing villages gulf of mannar"
+            ],
+            "question": "How many fishing villages depend on the Gulf of Mannar?",
+            "answer": "Around 125 fishing villages depend directly on the Gulf of Mannar resources."
+        },
+        {
+            "category": "Island Knowledge",
+            "keywords": [
+                "21 islands",
+                "gulf islands"
+            ],
+            "question": "How many islands are there in the Gulf of Mannar?",
+            "answer": "There are 21 islands located parallel to the coast in the Gulf of Mannar."
+        },
+        {
+            "category": "Traditional Fishing",
+            "keywords": [
+                "kalamkatti",
+                "bamboo fishing"
+            ],
+            "question": "What is Kalamkatti fishing?",
+            "answer": "Kalamkatti is a traditional fishing method where rectangular bamboo hedges are planted in the sea to trap fish."
+        },
+        {
+            "category": "Seaweed Collection",
+            "keywords": [
+                "seaweed collection",
+                "gelidiella",
+                "gracilaria"
+            ],
+            "question": "When did seaweed collection start in the Gulf of Mannar?",
+            "answer": "Commercial seaweed collection started in 1966 and included species like Gelidiella and Gracilaria."
+        },
+        {
+            "category": "Community Rules",
+            "keywords": [
+                "trawling restriction",
+                "community ban"
+            ],
+            "question": "Do fishing communities follow their own regulations?",
+            "answer": "Yes, local communities have banned dynamite fishing, coral mining and restricted trawling between mainland and islands."
+        },
+        {
+            "category": "Climate Knowledge",
+            "keywords": [
+                "wind direction",
+                "important climate factor"
+            ],
+            "question": "Which climatic factor is most important for fishermen?",
+            "answer": "Fishermen believe current is the most important climatic factor affecting fishing, followed by wind direction and speed."
+        },
+        {
+            "category": "Climate Knowledge",
+            "keywords": [
+                "overfishing reason"
+            ],
+            "question": "What do fishermen believe is the main reason for reduced fish catch?",
+            "answer": "Fishermen believe overfishing and juvenile exploitation are the main reasons for reduced fish catch."
+        },
+        {
+            "category": "Current Direction",
+            "keywords": [
+                "south to north current"
+            ],
+            "question": "Which current direction gives good fish catch?",
+            "answer": "Current flowing from south to north usually gives good fish catch as it supports larval distribution."
+        },
+        {
+            "category": "Water Color",
+            "keywords": [
+                "black water fish",
+                "white water fish"
+            ],
+            "question": "What does water colour indicate in fishing?",
+            "answer": "Black water indicates mackerel and sardine presence, while white water suggests pomfret."
+        },
+        {
+            "category": "Cyclone Prediction",
+            "keywords": [
+                "north east wind storm"
+            ],
+            "question": "How do fishermen predict storms?",
+            "answer": "Fishermen believe north-east wind indicates storms or cyclones."
+        },
+        {
+            "category": "Species Migration",
+            "keywords": [
+                "fish migration"
+            ],
+            "question": "Have fishermen observed fish migration?",
+            "answer": "Yes, fishermen have observed some species migrating due to temperature and environmental changes."
+        },
+        {
+            "category": "Adaptation",
+            "keywords": [
+                "cyclone safety"
+            ],
+            "question": "How do fishermen adapt during cyclones?",
+            "answer": "Fishermen prefer temporary relocation from villages during cyclones and sea erosion."
+        },
+        {
+            "category": "Monsoon",
+            "keywords": [
+                "what is monsoon",
+                "monsoon meaning"
+            ],
+            "question": "What is monsoon?",
+            "answer": "Monsoon is a seasonal wind system that changes direction every six months. In India, the southwest monsoon brings rain in summer and the northeast monsoon comes in winter."
+        },
+        {
+            "category": "Monsoon",
+            "keywords": [
+                "southwest monsoon",
+                "idavappathi"
+            ],
+            "question": "When does the southwest monsoon arrive in Kerala?",
+            "answer": "The southwest monsoon usually arrives between May 25 and June 8. In Kerala it is called Idavappathi."
+        },
+        {
+            "category": "Monsoon",
+            "keywords": [
+                "northeast monsoon",
+                "tulaavarsham"
+            ],
+            "question": "What is the northeast monsoon?",
+            "answer": "The northeast monsoon occurs between October and December. It is called Thulaavarsham in Kerala and is known as the retreating monsoon."
+        },
+        {
+            "category": "Monsoon Signs",
+            "keywords": [
+                "burst of monsoon",
+                "dragonflies"
+            ],
+            "question": "What are the signs of the monsoon arriving?",
+            "answer": "Dark clouds gather, strong westerly winds blow, thunder and lightning appear, and dragonflies fill the air. This sudden start is called the burst of monsoon."
+        },
+        {
+            "category": "Fishing & Monsoon",
+            "keywords": [
+                "fishing during monsoon",
+                "rough sea"
+            ],
+            "question": "Can fishermen go to sea during heavy monsoon?",
+            "answer": "During strong monsoon winds and high waves, it becomes dangerous for fishermen to go to sea."
+        },
+        {
+            "category": "Chaakara",
+            "keywords": [
+                "chaakara",
+                "mud bank"
+            ],
+            "question": "What is Chaakara?",
+            "answer": "Chaakara is a special mud bank that forms in the sea during the southwest monsoon. It creates a calm area in the sea where fish gather in large numbers."
+        },
+        {
+            "category": "Chaakara",
+            "keywords": [
+                "mud bank formation"
+            ],
+            "question": "How does Chaakara form?",
+            "answer": "Heavy monsoon rain washes silt and clay from the hills into rivers. When this reaches the sea, it mixes with seawater and forms a thick mud layer that reduces waves and creates calm water."
+        },
+        {
+            "category": "Fishing Benefit",
+            "keywords": [
+                "fish during chaakara",
+                "bumper catch"
+            ],
+            "question": "Why is Chaakara important for fishermen?",
+            "answer": "Chaakara attracts fish and prawns in large numbers. The calm sea makes fishing safe and gives fishermen a bumper catch."
+        },
+        {
+            "category": "Chaakara",
+            "keywords": [
+                "waves calm mud bank"
+            ],
+            "question": "Why are waves weak in Chaakara areas?",
+            "answer": "The thick mud layer under the water reduces wave strength, making the sea calm even during the monsoon."
+        },
+        {
+            "category": "Kerala Geography",
+            "keywords": [
+                "kerala rainfall"
+            ],
+            "question": "How much rain does Kerala receive annually?",
+            "answer": "Kerala receives about 3000 to 4000 mm of rainfall every year."
+        },
+        {
+            "category": "Groundwater",
+            "keywords": [
+                "open wells kerala"
+            ],
+            "question": "Why are open wells common in Kerala?",
+            "answer": "Because of heavy monsoon rainfall, groundwater gets stored underground. Many traditional houses use open wells for daily water needs."
+        },
+        {
+            "category": "River Flow",
+            "keywords": [
+                "river during monsoon"
+            ],
+            "question": "What happens to rivers during monsoon?",
+            "answer": "Rivers flow strongly during monsoon, carry silt and sand, and sometimes overflow, creating new sandbanks."
+        },
+        {
+            "category": "Water Culture",
+            "keywords": [
+                "ponds tanks kerala"
+            ],
+            "question": "How do ponds and tanks help Kerala villages?",
+            "answer": "Ponds and tanks store rainwater and help meet domestic and irrigation needs."
+        },
+        {
+            "category": "Climate",
+            "keywords": [
+                "upwelling monsoon"
+            ],
+            "question": "What happens to sea water during monsoon?",
+            "answer": "During monsoon, cooler deep water rises to the surface near the coast. This process supports marine life."
+        },
+        {
+            "category": "Pepper & Monsoon",
+            "keywords": [
+                "pepper and monsoon"
+            ],
+            "question": "Why is monsoon important for pepper cultivation?",
+            "answer": "Pepper vines in the Western Ghats depend on monsoon rain. Without Idavappathi rain, pepper plants cannot grow properly."
+        },
+        {
+            "category": "Trade Winds",
+            "keywords": [
+                "hippalus wind",
+                "monsoon trade"
+            ],
+            "question": "How did monsoon winds help ancient traders?",
+            "answer": "Monsoon winds changed direction every six months, allowing traders to sail from Arabia to Kerala and return safely."
+        },
+        {
+            "category": "Ancient Ports",
+            "keywords": [
+                "muziris",
+                "kodungallur"
+            ],
+            "question": "Why was Muziris important?",
+            "answer": "Muziris (Kodungallur) was an ancient port where traders from Rome, Arabia, and Greece came to buy spices like pepper."
+        },
+        {
+            "category": "Wetlands",
+            "keywords": [
+                "wetlands importance"
+            ],
+            "question": "Why are wetlands important in Kerala?",
+            "answer": "Wetlands support fisheries, provide water, support agriculture, and protect biodiversity."
+        },
+        {
+            "category": "Water Scarcity",
+            "keywords": [
+                "water scarcity kerala"
+            ],
+            "question": "Why does Kerala face water shortage despite heavy rainfall?",
+            "answer": "Because rivers flow quickly to the sea and many ponds and wetlands have been filled or destroyed."
+        },
+        {
+            "category": "Seasonal Changes",
+            "keywords": [
+                "karkkidakam"
+            ],
+            "question": "What is special about the month of Karkkidakam?",
+            "answer": "Karkkidakam is the peak monsoon month in Kerala. It is known for heavy rain and difficult living conditions."
+        },
+        {
+            "category": "Chaakara Meaning",
+            "keywords": [
+                "chakara meaning",
+                "chaavu kara meaning"
+            ],
+            "question": "What does the word Chaakara mean?",
+            "answer": "The word Chaakara comes from Malayalam words 'Chaavu' and 'Kara', meaning 'die on the shore'. It refers to the large number of fish that gather near the shore during this phenomenon."
+        },
+        {
+            "category": "Chaakara Locations",
+            "keywords": [
+                "chakara purakkad",
+                "chakara kodungallur"
+            ],
+            "question": "Where does Chaakara usually occur in Kerala?",
+            "answer": "Chaakara commonly occurs near Purakkad in Alappuzha district and Kodungallur in Thrissur district."
+        },
+        {
+            "category": "Chaakara Geography",
+            "keywords": [
+                "underwater topography chakara"
+            ],
+            "question": "Why is Chaakara common along the Kerala coast?",
+            "answer": "The Kerala coast has unique underwater topography that enhances upwelling, making Chaakara more likely to occur."
+        },
+        {
+            "category": "Chaakara Economy",
+            "keywords": [
+                "chakara economic benefit",
+                "chakara prosperity"
+            ],
+            "question": "How does Chaakara benefit fishermen?",
+            "answer": "During Chaakara, fish gather in large numbers near the shore. This gives fishermen a huge catch in a short time, bringing sudden economic prosperity."
+        },
+        {
+            "category": "Chaakara Culture",
+            "keywords": [
+                "chakara cultural significance"
+            ],
+            "question": "What is the cultural importance of Chaakara?",
+            "answer": "Chaakara is seen as nature’s blessing by coastal communities and is deeply connected with local folklore and traditions."
+        },
+        {
+            "category": "Chaakara Sustainability",
+            "keywords": [
+                "chakara overfishing",
+                "chakara impact"
+            ],
+            "question": "Can human activities affect Chaakara?",
+            "answer": "Yes. Overfishing, coastal development and environmental damage can reduce the frequency and strength of Chaakara events."
+        },
+        {
+            "category": "Global Comparison",
+            "keywords": [
+                "chakara south america"
+            ],
+            "question": "Is Chaakara seen anywhere outside India?",
+            "answer": "Similar upwelling-based fish congregation phenomena are observed in some coastal regions of South America."
+        },
+        {
+            "category": "Trawl Fishing",
+            "keywords": [
+                "trawl fishing kerala",
+                "mechanized fishing"
+            ],
+            "question": "What is trawl fishing?",
+            "answer": "Trawl fishing is a mechanized fishing method where large nets are dragged through the sea using powered boats."
+        },
+        {
+            "category": "Kerala Fisheries",
+            "keywords": [
+                "kerala marine fish landings"
+            ],
+            "question": "How important is trawl fishing in Kerala?",
+            "answer": "Trawlers contribute about 40% of marine fish landings in Kerala."
+        },
+        {
+            "category": "Catch Trend",
+            "keywords": [
+                "marine catch decline kerala"
+            ],
+            "question": "Has marine fish catch in Kerala increased or decreased?",
+            "answer": "Total marine fish catch in Kerala declined from 0.58 million tonnes in 1997 to 0.48 million tonnes in 2015."
+        },
+        {
+            "category": "Engine Capacity",
+            "keywords": [
+                "engine horsepower trawlers"
+            ],
+            "question": "How has engine power of trawlers changed?",
+            "answer": "Engine power increased from around 90 horsepower in the 1990s to as high as 550 horsepower by 2015."
+        },
+        {
+            "category": "Fishing Trips",
+            "keywords": [
+                "multiday fishing"
+            ],
+            "question": "What is multiday trawling?",
+            "answer": "Multiday trawling means fishing trips that last several days instead of returning to shore daily."
+        },
+        {
+            "category": "Fuel Use",
+            "keywords": [
+                "diesel use trawlers"
+            ],
+            "question": "How has fuel usage changed in trawl fishing?",
+            "answer": "Diesel use increased from about 90 million litres in 1997 to nearly 189 million litres in 2014."
+        },
+        {
+            "category": "Cost Increase",
+            "keywords": [
+                "diesel cost increase",
+                "ice cost increase"
+            ],
+            "question": "Have fishing costs increased?",
+            "answer": "Yes. Diesel cost increased nearly five times and ice cost increased about eight times between 1997 and 2015."
+        },
+        {
+            "category": "Fish Price",
+            "keywords": [
+                "fish price growth"
+            ],
+            "question": "Did fish prices increase at the same rate as costs?",
+            "answer": "No. Fish prices increased less than two times in real terms, which is much lower than the increase in fuel and ice costs."
+        },
+        {
+            "category": "Productivity",
+            "keywords": [
+                "total factor productivity",
+                "tfp trawl"
+            ],
+            "question": "What is Total Factor Productivity (TFP)?",
+            "answer": "Total Factor Productivity measures how efficiently inputs like fuel, labor, and ice are used to produce fish catch."
+        },
+        {
+            "category": "Sustainability",
+            "keywords": [
+                "economic sustainability trawlers"
+            ],
+            "question": "Is trawl fishing economically sustainable in Kerala?",
+            "answer": "Studies show that despite increased technology and engine power, total factor productivity declined, indicating economic inefficiency."
+        },
+        {
+            "category": "Environmental Impact",
+            "keywords": [
+                "greenhouse gas fishing"
+            ],
+            "question": "How do high-speed engines affect the environment?",
+            "answer": "High-speed engines increase fuel use and greenhouse gas emissions, which can harm the environment."
+        },
+        {
+            "category": "Fishing Conflict",
+            "keywords": [
+                "trawlers impact other fishermen"
+            ],
+            "question": "Do high-powered trawlers affect other fishermen?",
+            "answer": "Yes. High-powered trawlers can catch fish that are usually targeted by other fishing methods, creating competition and conflict."
+        },
+        {
+            "category": "Fishing Regulations",
+            "keywords": [
+                "trawling ban kerala",
+                "trawl ban period",
+                "fishing ban kerala"
+            ],
+            "question": "Is there a trawling ban in Kerala?",
+            "answer": "Yes. Kerala imposes a trawling ban every year to protect fish during their breeding season and to support sustainable fishing."
+        },
+        {
+            "category": "Fishing Regulations",
+            "keywords": [
+                "when is trawling ban",
+                "ban dates kerala",
+                "trawl ban date"
+            ],
+            "question": "When does the trawling ban happen in Kerala?",
+            "answer": "The trawling ban in Kerala usually starts on May 1 and ends on June 16 every year."
+        },
+        {
+            "category": "Fishing Regulations",
+            "keywords": [
+                "why trawling banned",
+                "reason for fishing ban",
+                "breeding season ban"
+            ],
+            "question": "Why is trawling banned during this period?",
+            "answer": "Trawling is banned to protect fish during their breeding season. It helps fish reproduce safely and increases future fish stock."
+        },
+        {
+            "category": "Fishing Regulations",
+            "keywords": [
+                "what is trawling",
+                "bottom trawling meaning"
+            ],
+            "question": "What is trawling?",
+            "answer": "Trawling is a fishing method where large nets are dragged along the sea bottom to catch fish. It can disturb marine habitats and catch juvenile fish."
+        },
+        {
+            "category": "Fishing Regulations",
+            "keywords": [
+                "who is affected by trawling ban",
+                "mechanized boats ban"
+            ],
+            "question": "Who is affected by the trawling ban?",
+            "answer": "The ban mainly affects mechanized trawlers and large fishing boats that use bottom trawl nets."
+        },
+        {
+            "category": "Fishing Regulations",
+            "keywords": [
+                "is traditional fishing allowed",
+                "small boats during ban"
+            ],
+            "question": "Can traditional fishermen fish during the ban period?",
+            "answer": "Yes. Traditional fishermen using small boats and non-trawl gear are usually allowed to fish during the ban period."
+        },
+        {
+            "category": "Fishing Regulations",
+            "keywords": [
+                "benefits of trawling ban",
+                "how ban helps fishermen"
+            ],
+            "question": "How does the trawling ban benefit fishermen?",
+            "answer": "The ban allows fish to breed and grow, which increases fish availability after the ban. This helps fishermen get better catch in the long term."
+        },
+        {
+            "category": "Fishing Regulations",
+            "keywords": [
+                "breeding season fish kerala",
+                "fish spawning season"
+            ],
+            "question": "Which season is the breeding season for fish in Kerala?",
+            "answer": "Many marine fish species breed during the southwest monsoon season, which begins in June."
+        },
+        {
+            "category": "Fishing Regulations",
+            "keywords": [
+                "is ban same every year",
+                "ban date change"
+            ],
+            "question": "Are the trawling ban dates the same every year?",
+            "answer": "The ban usually happens from May 1 to June 16, but the government may slightly adjust the dates based on policy decisions."
+        },
+        {
+            "category": "Fishing Regulations",
+            "keywords": [
+                "penalty for trawling during ban",
+                "illegal fishing ban period"
+            ],
+            "question": "What happens if someone fishes using trawlers during the ban?",
+            "answer": "Fishing using mechanized trawlers during the ban is illegal. Violators may face fines, boat seizure, or legal action."
+        },
+        {
+            "category": "Fishing Regulations",
+            "keywords": [
+                "monsoon fishing ban",
+                "southwest monsoon ban"
+            ],
+            "question": "Is the trawling ban related to the monsoon?",
+            "answer": "Yes. The ban is connected to the southwest monsoon because many fish species breed during this time."
+        },
+        {
+            "category": "Fishing Regulations",
+            "keywords": [
+                "sustainable fishing kerala",
+                "fish stock protection"
+            ],
+            "question": "How does the trawling ban support sustainable fishing?",
+            "answer": "By stopping heavy fishing during breeding season, the ban helps maintain fish population, protect marine ecosystems, and ensure long-term fishing income."
+        },
+        {
+            "category": "Desalination",
+            "keywords": [
+                "desalination",
+                "lakshadweep water",
+                "drinking water island"
+            ],
+            "question": "How does NIOT help island communities with drinking water?",
+            "answer": "NIOT has developed Low Temperature Thermal Desalination (LTTD) plants to convert seawater into drinking water. These plants are operating in Lakshadweep islands and provide fresh water to local communities."
+        },
+        {
+            "category": "Ocean Energy",
+            "keywords": [
+                "otecn",
+                "ocean thermal energy",
+                "renewable energy sea"
+            ],
+            "question": "What is Ocean Thermal Energy Conversion (OTEC)?",
+            "answer": "Ocean Thermal Energy Conversion (OTEC) uses the temperature difference between warm surface water and cold deep-sea water to produce electricity and freshwater."
+        },
+        {
+            "category": "Coastal Protection",
+            "keywords": [
+                "beach restoration",
+                "shore protection",
+                "coastal erosion"
+            ],
+            "question": "How does NIOT help protect beaches from erosion?",
+            "answer": "NIOT designs coastal protection and beach restoration systems. For example, a 200 meter wide beach was restored in Odisha using NIOT's recommended design."
+        },
+        {
+            "category": "Ocean Observation",
+            "keywords": [
+                "tsunami warning",
+                "ocean buoy",
+                "wave monitoring"
+            ],
+            "question": "How does NIOT monitor ocean conditions?",
+            "answer": "NIOT maintains ocean observation systems including submerged tsunami buoys and High Frequency Radars to monitor waves, currents, and coastal conditions."
+        },
+        {
+            "category": "Marine Communication",
+            "keywords": [
+                "underwater phone",
+                "communication underwater"
+            ],
+            "question": "What is an Underwater Acoustic Telephone?",
+            "answer": "An Underwater Acoustic Telephone allows communication between a submersible and a ship using sound waves underwater."
+        },
+        {
+            "category": "Fish Farming",
+            "keywords": [
+                "open sea cage",
+                "fish farming sea"
+            ],
+            "question": "What is an Open Sea Fish Cage system?",
+            "answer": "An Open Sea Fish Cage system is a floating structure used to farm fish in the sea. NIOT developed a 10 meter diameter cage system with automatic fish feeding."
+        },
+        {
+            "category": "Ocean Mapping",
+            "keywords": [
+                "drone mapping coast",
+                "coastal mapping"
+            ],
+            "question": "How are drones used for coastal monitoring?",
+            "answer": "NIOT uses hexacopter drones with sensors and LiDAR to map coastal areas, monitor air quality, and create 2D and 3D coastal models."
+        },
+        {
+            "category": "Deep Ocean Mission",
+            "keywords": [
+                "deep ocean mission",
+                "deep sea exploration"
+            ],
+            "question": "What is the Deep Ocean Mission?",
+            "answer": "The Deep Ocean Mission is a Government of India initiative to explore deep-sea resources, develop underwater vehicles, study biodiversity, and generate energy and freshwater from the ocean."
+        },
+        {
+            "category": "Disaster Safety",
+            "keywords": [
+                "cyclone monitoring",
+                "wave data",
+                "marine safety"
+            ],
+            "question": "How does ocean data help coastal safety?",
+            "answer": "Ocean observation systems collect real-time data on waves, currents, and temperature. This information helps predict storms and improve coastal safety."
+        },
+        {
+            "category": "Island Infrastructure",
+            "keywords": [
+                "lakshadweep development",
+                "island technology"
+            ],
+            "question": "How is technology used to improve life in islands?",
+            "answer": "NIOT develops desalination plants, ocean energy systems, and coastal protection structures to improve water availability, safety, and sustainability in island regions."
+        }
+    ]
+}

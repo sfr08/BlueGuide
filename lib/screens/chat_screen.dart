@@ -4,6 +4,7 @@ import '../models/chat_message.dart';
 import '../widgets/chat_bubble.dart';
 import '../services/decision_engine.dart';
 import '../providers/auth_provider.dart';
+import '../providers/connectivity_provider.dart';
 import 'login_screen.dart';
 import 'history_screen.dart';
 import 'settings_screen.dart';
@@ -101,6 +102,30 @@ class _ChatScreenState extends State<ChatScreen> {
           ),
         ),
         actions: [
+          Builder(
+            builder: (context) {
+              // Consumer to listen to connectivity changes
+              final isOnline = context.watch<ConnectivityProvider>().isOnline;
+              return IconButton(
+                icon: Icon(
+                  isOnline ? Icons.wifi : Icons.wifi_off,
+                  color: isOnline ? Colors.greenAccent : Colors.redAccent,
+                ),
+                tooltip: isOnline ? "Online Mode" : "Offline Mode",
+                onPressed: () {
+                  context.read<ConnectivityProvider>().toggleConnection();
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(
+                      content: Text(isOnline
+                          ? "Switched to Offline Mode"
+                          : "Switched to Online Mode"),
+                      duration: const Duration(seconds: 1),
+                    ),
+                  );
+                },
+              );
+            },
+          ),
           Consumer<AuthProvider>(
             builder: (context, auth, _) {
               if (auth.isLoggedIn) {
@@ -208,7 +233,9 @@ class _ChatScreenState extends State<ChatScreen> {
             _buildDrawerItem(Icons.add, "New Chat", _startNewChat),
             _buildDrawerItem(Icons.history, "Chat History",
                 () => _navigateTo(const HistoryScreen())),
-            _buildDrawerItem(Icons.attach_money, "My Earnings",
+            _buildDrawerItem(Icons.book, "Contribute",
+                () => _navigateTo(const ContributeScreen())),
+            _buildDrawerItem(Icons.currency_rupee, "My Earnings",
                 () => _navigateTo(const RewardsScreen())),
             _buildDrawerItem(Icons.settings, "Settings",
                 () => _navigateTo(const SettingsScreen())),
@@ -216,9 +243,6 @@ class _ChatScreenState extends State<ChatScreen> {
                 () => _navigateTo(StaticContentScreen.privacy())),
             _buildDrawerItem(Icons.help, "Help",
                 () => _navigateTo(StaticContentScreen.help())),
-            const Divider(color: Colors.white10),
-            _buildDrawerItem(Icons.volunteer_activism, "Contribute",
-                () => _navigateTo(const ContributeScreen())),
             const Divider(color: Colors.white10),
             _buildDrawerItem(
                 Icons.logout, "Logout", () => _handleLogout(context)),
@@ -299,58 +323,116 @@ class _WelcomeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: SingleChildScrollView(
-        padding: const EdgeInsets.all(32),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Container(
-              padding: const EdgeInsets.all(24),
-              decoration: BoxDecoration(
+    return Stack(
+      children: [
+        // Background image - coastal fishermen scene
+        Positioned.fill(
+          child: Image.asset(
+            'assets/images/coastal1.jpg',
+            fit: BoxFit.cover,
+            errorBuilder: (context, error, stackTrace) {
+              // Simple fallback to solid color if image not found
+              return Container(
                 color: const Color(0xFF1E293B),
-                shape: BoxShape.circle,
-                border:
-                    Border.all(color: Colors.blue.withOpacity(0.3), width: 2),
-              ),
-              child: const Text(
-                "🐠", // The "Talking Fish"
-                style: TextStyle(fontSize: 64),
-              ),
-            ),
-            const SizedBox(height: 24),
-            const Text(
-              "Welcome to BlueGuide",
-              style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-                color: Colors.white,
-              ),
-            ),
-            const SizedBox(height: 8),
-            Text(
-              "Your coastal knowledge assistant",
-              style: TextStyle(
-                fontSize: 16,
-                color: Colors.grey[400],
+              );
+            },
+          ),
+        ),
+        // Dark fade overlay to ensure text readability
+        Positioned.fill(
+          child: Container(
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [
+                  const Color(0xFF0B0F1A).withOpacity(0.5),
+                  const Color(0xFF0B0F1A).withOpacity(0.88),
+                ],
               ),
             ),
-            const SizedBox(height: 48),
-            // Example queries
-            Wrap(
-              spacing: 12,
-              runSpacing: 12,
-              alignment: WrapAlignment.center,
+          ),
+        ),
+        // Content
+        Center(
+          child: SingleChildScrollView(
+            padding: const EdgeInsets.all(32),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                _buildSuggestionChip("🌊  Sea Safety"),
-                _buildSuggestionChip("🎣  Fishing Zones"),
-                _buildSuggestionChip("🌩️  Weather Alerts"),
-                _buildSuggestionChip("🏛️  Gov Schemes"),
+                Container(
+                  padding: const EdgeInsets.all(24),
+                  decoration: BoxDecoration(
+                    color: Colors.white.withOpacity(0.1),
+                    shape: BoxShape.circle,
+                    border: Border.all(
+                        color: Colors.blue.withOpacity(0.4), width: 3),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.blue.withOpacity(0.3),
+                        blurRadius: 20,
+                        spreadRadius: 5,
+                      ),
+                    ],
+                  ),
+                  child: const Text(
+                    "🐠", // The "Talking Fish"
+                    style: TextStyle(fontSize: 64),
+                  ),
+                ),
+                const SizedBox(height: 24),
+                Container(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                  decoration: BoxDecoration(
+                    color: Theme.of(context).brightness == Brightness.dark
+                        ? Colors.black.withOpacity(0.3)
+                        : Colors.white.withOpacity(0.6),
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                  child: Text(
+                    "Welcome to BlueGuide",
+                    style: TextStyle(
+                      fontSize: 24,
+                      fontWeight: FontWeight.bold,
+                      color: Theme.of(context).brightness == Brightness.dark
+                          ? Colors.white
+                          : Colors.black,
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 8),
+                Text(
+                  "Your coastal knowledge assistant",
+                  style: TextStyle(
+                    fontSize: 16,
+                    color: Colors.grey[200],
+                    shadows: [
+                      Shadow(
+                        color: Colors.black.withOpacity(0.5),
+                        blurRadius: 4,
+                      ),
+                    ],
+                  ),
+                ),
+                const SizedBox(height: 48),
+                // Example queries
+                Wrap(
+                  spacing: 12,
+                  runSpacing: 12,
+                  alignment: WrapAlignment.center,
+                  children: [
+                    _buildSuggestionChip("🌊  Sea Safety"),
+                    _buildSuggestionChip("🎣  Fishing Zones"),
+                    _buildSuggestionChip("🌩️  Weather Alerts"),
+                    _buildSuggestionChip("🏛️  Gov Schemes"),
+                  ],
+                ),
               ],
             ),
-          ],
+          ),
         ),
-      ),
+      ],
     );
   }
 

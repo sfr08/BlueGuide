@@ -34,24 +34,68 @@ class HiveService {
     final box = knowledgeBox;
     print("DEBUG: Checking Knowledge Box... Count: ${box.length}");
 
-    // TEMP DEBUG: Force clear to ensure seed happens if it looks empty or wrong
-    // if (box.isEmpty) { ... }
+    // Force re-seeding logic to ensure custom data is loaded
+    // In a real app we might check a version flag.
+    // For now, we will verify if 'custom_data_loaded' marker exists or just clear and reload if count is low/default.
 
-    if (box.isNotEmpty) {
-      print("DEBUG: Box already seeded. Skipping JSON load.");
-      return;
+    // Simplification: Let's read the custom file. If it parses, we UPSERT it.
+
+    print("DEBUG: Starting Custom Seed Process...");
+    try {
+      final jsonString =
+          await rootBundle.loadString('assets/data/custom_data.json');
+      print("DEBUG: Custom JSON Loaded. Length: ${jsonString.length}");
+
+      final Map<String, dynamic> jsonMap = json.decode(jsonString);
+      if (jsonMap.containsKey('chatbot_data')) {
+        final List<dynamic> jsonList = jsonMap['chatbot_data'];
+        print("DEBUG: Found 'chatbot_data' with ${jsonList.length} items.");
+
+        // We will upsert these.
+        // NOTE: Typically valid to clear purely cached data if we want strict sync
+        // box.clear();
+
+        for (var item in jsonList) {
+          // Generate ID from question hash to be consistent
+          final String id = "q_${item['question'].hashCode}";
+
+          // Create rich description by appending keywords to answer
+          // This helps the fuzzy search find it even if the question isn't exact
+          // UPDATE: User requested to hide keywords.
+          final String combinedDesc = item['answer'];
+
+          final knowledge = CoastalKnowledge(
+            id: id,
+            title: item['question'],
+            description: combinedDesc,
+            category: item['category'] ?? 'General',
+            verificationStatus: 'verified',
+            confidenceScore: 100,
+            accessCount: 0,
+            contributorId: 'system_custom',
+            createdAt: DateTime.now(),
+          );
+          await box.put(knowledge.id, knowledge);
+        }
+        print(
+            "DEBUG: SUCCESS! Custom data merged. Total entries: ${box.length}");
+      }
+    } catch (e) {
+      print("DEBUG: Custom data load skipped or failed: $e");
+      // Fallback to original seed ONLY if box is empty
+      if (box.isEmpty) {
+        await _seedOriginalFallback();
+      }
     }
+  }
 
-    print("DEBUG: Starting Seed Process...");
+  static Future<void> _seedOriginalFallback() async {
     try {
       final jsonString =
           await rootBundle.loadString('assets/data/knowledge_base.json');
-      print("DEBUG: JSON Loaded. Length: ${jsonString.length}");
-
       final List<dynamic> jsonList = json.decode(jsonString);
-      print("DEBUG: JSON Parsed. Items: ${jsonList.length}");
-
       for (var item in jsonList) {
+        // ... (simple mapping as before)
         final knowledge = CoastalKnowledge(
           id: item['id'],
           title: item['title'],
@@ -63,13 +107,10 @@ class HiveService {
           contributorId: item['contributorId'],
           createdAt: DateTime.parse(item['createdAt']),
         );
-        await box.put(knowledge.id, knowledge);
+        await HiveService.knowledgeBox.put(knowledge.id, knowledge);
       }
-      print(
-          "DEBUG: SUCCESS! Knowledge Base seeded with ${box.length} entries.");
-    } catch (e, stack) {
-      print("DEBUG ERROR seeding knowledge base: $e");
-      print(stack);
+    } catch (e) {
+      print("Fallback seed failed: $e");
     }
   }
 
