@@ -1,6 +1,6 @@
 # BlueGuide 🌊
 
-**BlueGuide** is a coastal knowledge platform designed specifically for Indian coastal communities. It provides essential information about fishing, marine safety, weather patterns, and government schemes through an intelligent AI-powered chat interface that works both online and offline.
+**BlueGuide** is a coastal knowledge platform designed specifically for Indian coastal communities. It provides essential information about fishing, marine safety, weather patterns, and government schemes through an intelligent AI-powered chat interface that works both online and offline.**Created for the hackathon conducted by MES ASMABI COLLEGE THRISSUR on 6/2/2026-7/2/2026**
 
 ## 📖 Overview
 
